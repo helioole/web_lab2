@@ -3,48 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Bookstore</title>
+    <title>Book Store Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <h1 class="logo">Online Bookstore</h1>
+    
+    <section>
+
         <nav>
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Products</a>
-            <a href="#" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">Contact Us</a>
+
+            <div class="logo">
+                <img src="images/logo1.png">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Arrivals">Arrivals</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#Delivery">Delivery</a></li>
+                <li><a href="#Contact Us">Contact Us</a></li>
+            </ul>             
+
+            <div class="social_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
         </nav>
-    </header>
-    
-    <main>
-        <div class="container">
-            <div class="sidebar">
-                <h2>Categories</h2>
-                <ul>
-                    <li><a href="#">Fiction</a></li>
-                    <li><a href="#">Non-Fiction</a></li>
-                    <li><a href="#">Science</a></li>
-                    <li><a href="#">History</a></li>
-                </ul>
+
+        <div class="main">
+
+            <div class="main_tag">
+                <h1>WELCOME TO<br><span>InkSpot</span></h1>
+
+                <p>
+                    Welcome to InkSpot bookstore, where each page is a gateway to new worlds 
+                    and endless possibilities. Dive into our collection and discover the 
+                    magic of storytelling at your fingertips. Whether you're seeking 
+                    adventure, knowledge, or simply a moment of escape, we have something 
+                    for every reader. Welcome to a place where stories come alive.
+                </p>
+                <a href="#" class="main_btn">Learn More</a>
+
             </div>
-            
-            <div class="content">
-                <div class="search-container">
-                    <input type="text" placeholder="Search books...">
-                    <button class="search-button">Search</button>
-                </div>
-                
-                <div class="book-list">
-                </div>
+
+            <div class="main_img">
+                <img src="images/table1.png">
             </div>
         </div>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p>Online Bookstore &copy; 2024. All rights reserved.</p>
+
+    </section>
+
+    <!--Services-->
+
+    <div class="services">
+
+        <div class="services_box">
+
+            <div class="services_card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Fast delivery across the country
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-gears"></i>
+                <h3>Customer Support</h3>
+                <p>
+                    We are always available for you 24/7
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-tag"></i>
+                <h3>Best Deal</h3>
+                <p>
+                    Check new arrivals for the best price
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-gift"></i>
+                <h3></h3>
+                <p>
+                    Do you want to make a gift? We pack it for you for free!
+                </p>
+            </div>
         </div>
-    </footer>
+
+    </div>
 </body>
 </html>
