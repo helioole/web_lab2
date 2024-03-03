@@ -30,6 +30,22 @@ section nav .logo img{
     margin: 8px 0;
 }
 
+.toggle-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+section nav input {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 section nav ul{
     list-style: none;
 }
@@ -57,6 +73,26 @@ section nav .social_icon i{
 section nav .social_icon i:hover{
     color: #fff;
     cursor: pointer;
+}
+
+section nav input:checked + label .fa-bars {
+    display: none;
+}
+
+section nav input:checked + label .fa-times {
+    display: block;
+}
+
+section nav input:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #7b2cbf;
+    box-shadow: 0 0 10px #7b2cbf;
+    z-index: 1;
 }
 
 section .main{
@@ -96,6 +132,7 @@ section .main .main_tag .main_btn{
     left: 25px;
     color: #fff;
     text-decoration: none;
+
 }
 
 section .main .main_img img{
@@ -346,4 +383,153 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+
+    .toggle-icon {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #7b2cbf;
+        box-shadow: 0 0 10px #7b2cbf;
+        z-index: 1;
+    }
+
+    section nav ul {
+        display: none;
+    }
+
+    section nav li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    section nav input:checked ~ ul {
+        margin-top: -50px;
+        display: flex;
+    }
+
+    section .main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    section .main h1 {
+        margin-top: 100px;
+        top: 100;
+        left: 0;
+    }
+
+    section .main p {
+        padding: 0 20px;
+        width: 100%;
+        top: 100;
+        left: 0;
+    }
+
+    section .main .main_btn {
+        top: 0;
+        margin-left: -50px;
+    }
+
+    section .main .main_img img {
+        display: none;
+    }
+
+    .about .about_tag h1 {
+        margin-top: 100px;
+        font-size: 40px;
+        bottom: 20px;
+    }
+
+    .about .about_tag p {
+        width: 100%;
+    }
+
+    .services .services_box {
+        flex-direction: column;
+    }
+
+    .services .services_box .services_card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .arrivals h1 {
+        margin-top: -100px;
+        font-size: 40px;
+    }
+
+    .arrivals .arrivals_box {
+        grid-template-columns: 1fr;
+    }
+
+    .arrivals .arrivals_box .arrivals_card {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact {
+        margin-top: 2270px;
+    }
+
+    .contact .contact_tag h1 {
+        font-size: 40px;
+        padding: 0 20px;
+        bottom: 20px;
+    }
+
+    .contact .contact_tag p {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .contact-info {
+        margin-top: 20px; 
+    }
+
+    .contact-info h2 {
+        font-size: 20px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .email-area {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 30px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .email-area button {
+        width: 100%;
+        margin-left: 0;
+        border-radius: 10px;
+    }
+
+    .logo-contact {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .logo-contact img {
+        margin-right: 100px;
+    }
 }
