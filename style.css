@@ -530,6 +530,58 @@ footer {
     }
 
     .logo-contact img {
-        margin-right: 100px;
+        margin-right: 0;
+    }
+}
+
+.mascot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    animation: bounce 1s infinite alternate;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.mascot img {
+    width: 200px;
+    height: auto;
+}
+
+.mascot:hover::before {
+    width: 200px;
+    content: "Welcome to InkSpot! Explore the place where different stories begin.";
+    display: block;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 5px;
+    z-index: 1003;
+}
+
+.mascot:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+    z-index: 1002;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
     }
 }
