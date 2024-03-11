@@ -12,7 +12,7 @@ section{
     background-position: center;
 }
 
-section nav{
+header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,75 +24,70 @@ section nav{
     z-index: 100;
 }
 
-section nav .logo img{
+header .logo img {
     width: 100px;
     cursor: pointer;
     margin: 8px 0;
 }
 
-.toggle-icon {
-    display: none;
-    cursor: pointer;
-    color: #fff;
-}
-
-section nav input {
-    display: none;
-}
-
-.nav-links {
-    list-style: none;
+nav {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 
-section nav ul{
+nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-section nav li{
-    display: inline-block;
-    padding: 0 10px;
+nav li {
+    display: block;
+    padding: 10px 20px;
 }
 
-section nav li a{
+nav li a {
     text-decoration: none;
     color: #fff;
 }
 
-section nav li a:hover{
-    color: #7b2cbf;
+nav li a:hover {
+    border-bottom: 2px solid #fff;
 }
 
-section nav .social_icon i{
+.toggle-icon {
+    display: none;
+}
+
+.toggle-label {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.toggle-icon:checked ~ nav {
+    display: flex;
+}
+
+header .social_icon i{
     margin: 0 5px;
     font-size: 18px;
     color: #fff;
 }
 
-section nav .social_icon i:hover{
+header .social_icon i:hover{
     color: #fff;
     cursor: pointer;
-}
-
-section nav input:checked + label .fa-bars {
-    display: none;
-}
-
-section nav input:checked + label .fa-times {
-    display: block;
-}
-
-section nav input:checked ~ ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #7b2cbf;
-    box-shadow: 0 0 10px #7b2cbf;
-    z-index: 1;
 }
 
 section .main{
@@ -387,15 +382,31 @@ footer {
 
 @media only screen and (max-width: 1400px) {
 
-    .toggle-icon {
-        display: block;
+    header {
+        justify-content: space-around;
+        flex-direction: row;
     }
 
-    .nav {
+    .toggle-icon {
+        display: none; 
+    }
+
+    .toggle-icon:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        position: absolute;
+        width: 100%;
+        box-shadow: none;
+        margin-top: 60px;
+        text-align: center; 
+    }
+
+    nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; 
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: #7b2cbf;
@@ -403,18 +414,29 @@ footer {
         z-index: 1;
     }
 
-    section nav ul {
-        display: none;
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
     }
 
-    section nav li {
+    nav li {
         display: block;
         padding: 10px 0;
     }
 
-    section nav input:checked ~ ul {
-        margin-top: -50px;
-        display: flex;
+    .toggle-label {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
     }
 
     section .main {
