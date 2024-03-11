@@ -80,6 +80,9 @@ nav li a:hover {
 }
 
 header .social_icon i{
+    display: inline;
+    align-items: end;
+    justify-content: end;
     margin: 0 5px;
     font-size: 18px;
     color: #fff;

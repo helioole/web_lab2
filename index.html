@@ -6,6 +6,7 @@
     <title>Book Store Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="index.js"></script>
 </head>
 <body>
@@ -13,54 +14,48 @@
     <div class="mascot">
         <img src="images/mascot.png" alt="Mascot">
     </div>
-    <header>
-
-        <div class="logo">
-            <img src="images/logo1.png">
-        </div>
-
-        <input type="checkbox" id="menu-toggle" class="toggle-icon">
-        <label for="menu-toggle" class="toggle-label"><i class="fas fa-bars"></i></label>
-
-
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Arrivals">Arrivals</a></li>
-                <!-- <li><a href="#FAQ">FAQ</a></li>
-                <li><a href="#Delivery">Delivery</a></li> -->
-                <li><a href="#Contact Us">Contact Us</a></li>
-            </ul>             
-        </nav>
-
-        <div class="social_icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-heart"></i>
+    <header class="text-white">
+        <div class="d-flex justify-content-between align-items-center container py-2">
+            <div class="logo">
+                <img src="images/logo1.png" alt="Logo">
+            </div>
+    
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#Home" style="color: #fff;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#About" style="color: #fff;">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Arrivals" style="color: #fff;">Arrivals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ContactUs" style="color: #fff;">Contact Us</a></li>
+                    </ul>             
+                </div>
+    
+                <div class="social_icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </nav>
         </div>
     </header>
+    
 
-    <section>
-        
-        <div id="Home">
-            <div class="main">
-
+    <section class="container-fluid" id="Home">
+        <div class="row">
+            <div class="col-md-6 mt-auto mb-auto">
                 <div class="main_tag">
                     <h1>WELCOME TO<br><span>InkSpot</span></h1>
-
                     <p>
-                        Welcome to InkSpot bookstore, where each page is a gateway to new worlds 
-                        and endless possibilities. Dive into our collection and discover the 
-                        magic of storytelling at your fingertips. Whether you're seeking 
-                        adventure, knowledge, or simply a moment of escape, we have something 
-                        for every reader. Welcome to a place where stories come alive.
+                        Welcome to InkSpot bookstore, where each page is a gateway to new worlds and endless possibilities. Dive into our collection and discover the magic of storytelling at your fingertips. Whether you're seeking adventure, knowledge, or simply a moment of escape, we have something for every reader. Welcome to a place where stories come alive.
                     </p>
-                    <a href="#About" class="main_btn">Learn More</a>
-
+                    <a href="#About" class="btn btn-primary" style="background-color: #7b2cbf; border: none;">Learn More</a>
                 </div>
-
+            </div>
+            <div class="col-md-6">
                 <div class="main_img">
-                    <img src="images/table1.png">
+                    <img src="images/table1.png" width="780px" height="auto">
                 </div>
             </div>
         </div>
@@ -264,23 +259,23 @@
     </section>
 
     <!-- Contact Us -->
-    <section>
-        <div id="Contact Us">
-            
-            <div class="contact">
+    <section class="container" id="ContactUs">
+        <div class="row">
+            <div class="col-md-12 contact">
                 <div class="contact_tag">
                     <h1>Join Our Community</h1>
                     <p>We value your feedback, questions, and suggestions. Feel free to reach out to us using the provided contact information or the contact form below. We are here to assist you and look forward to hearing from you.</p>
                 </div>
-            </div>           
-
-            <div class="email-area">
-                <input type="text" id="userInput" name="userInput" placeholder="Your email">
-                <button type="button">Submit</button>
             </div>
+            <div class="col-md-12 email-area">
+                <input type="text" id="userInput" name="userInput" placeholder="Your email" class="form-control-lg">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </section>
 
             <footer>            
-                <div class="contact-info">
+                <div class="text-center text-white">
                     <h2>Contact Information:</h2>
                     <p><strong>Email:</strong> info@inkspot.com</p>
                     <p><strong>Phone:</strong> +1 (123) 456-7890</p>
@@ -291,9 +286,7 @@
                     <b>InkSpot</bb>
                 </div>
             </footer>
-
-        </div>
-    </section>
+    
 
 </body>
 </html>
